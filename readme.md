@@ -8,4 +8,4 @@ That should do it.
 
 ## License
 
-MIT
+[MIT](LICENSE)
