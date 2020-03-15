@@ -48,11 +48,11 @@ done
 
 set -- "${POSITIONAL[@]}"
 
-PATH="${1:-HOME}"
+LOCATION="${1:-$HOME}"
 
 cat <<EOF
 
-We're about to install all dots in your ${PATH} directory
+We're about to install all dots in your ${LOCATION} directory
 
     📌 .config/fish
     📌 .config/karabiner
