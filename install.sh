@@ -73,7 +73,7 @@ if [[ -d "${LOCATION}/.config/fish" ]]; then
     fi
 fi
 
-[ ! -d "${LOCATION}/.config"] && mkdir ${LOCATION}/.config
+[ ! -d "${LOCATION}/.config" ] && mkdir ${LOCATION}/.config
 
 ln -s "${CURRENT}/.config/fish" "${LOCATION}/.config/fish"
 
