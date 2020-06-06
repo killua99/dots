@@ -73,6 +73,8 @@ if [[ -d "${LOCATION}/.config/fish" ]]; then
     fi
 fi
 
+[ ! -d "${LOCATION}/.config"] && mkdir ${LOCATION}/.config
+
 ln -s "${CURRENT}/.config/fish" "${LOCATION}/.config/fish"
 
 echo "Fish installed ✅"
@@ -124,15 +126,3 @@ fi
 ln -s "${CURRENT}/.gitignore.tmp" "${LOCATION}/.gitignore"
 
 echo "Config gitignore installed ✅"
-
-if [[ -f "${LOCATION}/.viminfo" ]]; then
-    if [[ -L "${LOCATION}/.viminfo" ]]; then
-        unlink "${LOCATION}/.viminfo"
-    else
-        mv "${LOCATION}/.viminfo" "${LOCATION}/.viminfo.bkp"
-    fi
-fi
-
-ln -s "${CURRENT}/.viminfo.tmp" "${LOCATION}/.viminfo"
-
-echo "Config viminfo installed ✅"
