@@ -75,7 +75,7 @@ fi
 
 [ ! -d "${LOCATION}/.config" ] && mkdir ${LOCATION}/.config
 
-ln -sf "${CURRENT}/.config/fish" "${LOCATION}/.config/fish"
+ln -nsf "${CURRENT}/.config/fish" "${LOCATION}/.config/fish"
 
 echo "Fish installed ✅"
 
@@ -87,7 +87,7 @@ if [[ -d "${LOCATION}/.config/karabiner" ]]; then
     fi
 fi
 
-ln -sf "${CURRENT}/.config/karabiner" "${LOCATION}/.config/karabiner"
+ln -nsf "${CURRENT}/.config/karabiner" "${LOCATION}/.config/karabiner"
 
 echo "Karabiner installed ✅"
 
@@ -99,7 +99,7 @@ if [[ -f "${LOCATION}/.bash_profile" ]]; then
     fi
 fi
 
-ln -sf "${CURRENT}/.bash_profile" "${LOCATION}/.bash_profile"
+ln -nsf "${CURRENT}/.bash_profile" "${LOCATION}/.bash_profile"
 
 echo "Config bash_profile installed ✅"
 
@@ -111,7 +111,7 @@ if [[ -f "${LOCATION}/.gitconfig" ]]; then
     fi
 fi
 
-ln -sf "${CURRENT}/.gitconfig" "${LOCATION}/.gitconfig"
+ln -nsf "${CURRENT}/.gitconfig" "${LOCATION}/.gitconfig"
 
 echo "Config gitconfig installed ✅"
 
@@ -123,10 +123,10 @@ if [[ -f "${LOCATION}/.gitignore" ]]; then
     fi
 fi
 
-ln -sf "${CURRENT}/.gitignore.tmp" "${LOCATION}/.gitignore"
+ln -nsf "${CURRENT}/.gitignore.tmp" "${LOCATION}/.gitignore"
 
 echo "Config gitignore installed ✅"
 
-ln -sf "${CURRENT}/.tmux.conf.local" "${LOCATION}/.tmux.conf.local"
+ln -nsf "${CURRENT}/.tmux.conf.local" "${LOCATION}/.tmux.conf.local"
 
 echo "Config tmux installed ✅"
