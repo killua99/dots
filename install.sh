@@ -126,3 +126,7 @@ fi
 ln -s "${CURRENT}/.gitignore.tmp" "${LOCATION}/.gitignore"
 
 echo "Config gitignore installed ✅"
+
+ln -s "${CURRENT}/.tmux.conf.local" "${LOCATION}/.tmux.conf.local"
+
+echo "Config tmux installed ✅"
